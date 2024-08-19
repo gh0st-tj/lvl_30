@@ -16,21 +16,49 @@ body {
     scroll-behavior: smooth;
 }
 
+/* General section styling with dark overlay */
 .section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 20px; /* Reduced padding to move content higher */
+    padding: 20px 20px;
     text-align: center;
     position: relative;
     scroll-snap-align: start;
-    background: url('background.png') center/cover no-repeat, rgba(0, 0, 0, 0.7);
-    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background-blend-mode: overlay; /* Blend the overlay with the background image */
 }
 
+/* Specific background images for each section */
 #hero {
-    position: relative;
+    background-image: url('1.png');
+}
+
+#progress-age {
+    background-image: url('2.png');
+}
+
+#progress-life {
+    background-image: url('3.png');
+}
+
+#details {
+    background-image: url('4.png');
+}
+
+#food {
+    background-image: url('5.png');
+}
+
+#drinks {
+    background-image: url('6.png');
+}
+
+#rsvp {
+    background-image: url('7.png');
 }
 
 .subtitle {
