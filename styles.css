@@ -21,7 +21,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 20px;
+    padding: 20px 20px; /* Reduced padding to move content higher */
     text-align: center;
     position: relative;
     scroll-snap-align: start;
