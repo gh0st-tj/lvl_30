@@ -45,20 +45,24 @@ body {
     background-image: url('3.png');
 }
 
-#details {
-    background-image: url('4.png');
+#treat-ourselves {
+    background-image: url('4.png'); /* New section */
 }
 
-#food {
+#details {
     background-image: url('5.png');
 }
 
-#drinks {
+#food {
     background-image: url('6.png');
 }
 
-#rsvp {
+#drinks {
     background-image: url('7.png');
+}
+
+#rsvp {
+    background-image: url('8.png');
 }
 
 .subtitle {
