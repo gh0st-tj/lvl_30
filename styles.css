@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    scroll-snap-align: start;
+    background: url('background.png') center/cover no-repeat, rgba(0, 0, 0, 0.7);
+    background-blend-mode: overlay;
+}
+
+#hero {
+    position: relative;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    color: #ffd700;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 80%;
+    background-color: #333;
+    margin: 20px auto;
+    height: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.life-progress-bar {
+    background-color: #444;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    border-radius: 15px;
+    animation: loadProgress 3s ease-in-out forwards;
+}
+
+.large-text {
+    font-size: 2.2em;
+    color: #ffd700;
+    margin-top: 20px;
+}
+
+.small-text {
+    font-size: 0.8em;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+#food img, #drinks img {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(90deg, #1f4037, #99f2c8);
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #99f2c8, #1f4037);
+    transform: scale(1.05);
+}
+
+#not-attending {
+    background: linear-gradient(90deg, #ff4136, #ff851b);
+}
+
+#not-attending:hover {
+    background: linear-gradient(90deg, #ff851b, #ff4136);
+}
+
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: #ccc;
+    margin: 0;
+}
+
+#fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 1.2em;
+    }
+
+    .large-text {
+        font-size: 1.8em;
+    }
+}
+
+@keyframes loadProgress {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}

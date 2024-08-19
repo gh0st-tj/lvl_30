@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom's 30th Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="scroll-container">
+        <section id="hero" class="section">
+            <div id="fireworks"></div>
+            <div class="container animate__animated animate__fadeIn">
+                <h1>Tom's 30th Birthday</h1>
+                <p class="subtitle">Let's celebrate three decades of awesomeness!</p>
+            </div>
+        </section>
+
+        <section id="progress-age" class="section">
+            <div class="container animate__animated animate__fadeIn">
+                <h2>LVL 30: Loading...</h2>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div id="age-progress"></div>
+            </div>
+        </section>
+
+        <section id="progress-life" class="section">
+            <div class="container animate__animated animate__fadeIn">
+                <h2>Life:</h2>
+                <div class="progress-bar life-progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div id="life-progress"></div>
+            </div>
+        </section>
+
+        <section id="details" class="section">
+            <div class="container animate__animated animate__fadeIn">
+                <h2>Event Details</h2>
+                <p>Date: September 12</p>
+                <p>Time: 9:00 PM</p>
+                <p>Location: Men Tenten, Nahalat Binyamin St 57, Tel Aviv-Yafo</p>
+            </div>
+        </section>
+
+        <section id="food" class="section">
+            <div class="container animate__animated animate__fadeIn">
+                <h2>Food</h2>
+                <img src="food.jpg" alt="Food Image" class="animate__animated animate__zoomIn">
+            </div>
+        </section>
+
+        <section id="drinks" class="section">
+            <div class="container animate__animated animate__fadeIn">
+                <h2>Drinks</h2>
+                <img src="drinks.jpg" alt="Drinks Image" class="animate__animated animate__zoomIn">
+            </div>
+        </section>
+
+        <section id="rsvp" class="section">
+            <div class="container animate__animated animate__fadeIn">
+                <h2>RSVP</h2>
+                <div class="buttons">
+                    <button class="btn attend">Attending</button>
+                    <button class="btn attend-plus-one">Attending +1</button>
+                    <button class="btn" id="not-attending">Not Attending</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>See you soon!</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@latest/dist/fireworks.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
