@@ -1,4 +1,67 @@
+// Base64 encoded names
+const encodedNames = [
+    "VG9t",
+    "QWxpbmE",
+    "TGVl",
+    "R2Fs",
+    "T3o",
+    "Um9zZQ",
+    "QWxvbg",
+    "TmFkYXYgUy4",
+    "T21yeQ",
+    "Tml2",
+    "VGFs",
+    "QmFyL0FkYW0",
+    "RWxp",
+    "TGlvcg",
+    "T3Jlbg",
+    "TmFkYXYgTS4",
+    "SWRhbg",
+    "Y29uZ3JhdHotIHUgZm91bmQgdGhlIGd1ZXN0bGlzdA"
+];
+
+// Encryption and decryption functions
+function encrypt(text) {
+    return btoa(text); // Base64 encryption for simplicity
+}
+function decrypt(text) {
+    try {
+        const decoded = atob(text).trim(); // Trim any potential spaces
+        console.log("Decoded Text:", decoded);
+        return decoded;
+    } catch (e) {
+        console.error("Decryption error:", e);
+        return null;
+    }
+}
+
+// Function to get token from URL
+function getTokenFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token');
+    return token ? decodeURIComponent(token) : null;
+}
+
+function stripPadding(encodedStr) {
+    return encodedStr.replace(/=+$/, '');
+}
+
 window.onload = function() {
+    const token = getTokenFromUrl();
+    const name = decrypt(token);
+
+    const encodedName = stripPadding(btoa(name)); // Strip padding from the encoded name
+    console.log("Name:", name);
+    console.log("Encoded Name:", encodedName);
+    console.log("Is name in list:", encodedNames.includes(encodedName));
+
+    if (name && encodedNames.includes(encodedName)) {
+        document.querySelector('#invited-name').textContent = `${name},`;
+    } else {
+        document.body.innerHTML = '<section class="section"><h1>Invalid token</h1></section>';
+        return;
+    }
+
     const birthDate = new Date('1994-09-13');
     const currentDate = new Date();
     const daysLived = Math.floor((currentDate - birthDate) / (1000 * 60 * 60 * 24));
