@@ -8,7 +8,7 @@ const encodedNames = [
     "Um9zZQ",
     "QWxvbg",
     "TmFkYXYgUy4",
-    "T21yaVRoZUdheQ",
+    "T21yaQ",
     "Tml2",
     "VGFs",
     "QmFyL0FkYW0",
@@ -18,6 +18,7 @@ const encodedNames = [
     "TmFkYXYgTS4",
     "SWRhbg",
     "TWFzaGE",
+    "RXlhbA",
     "Y29uZ3JhdHotIHUgZm91bmQgdGhlIGd1ZXN0bGlzdA"
 ];
 
