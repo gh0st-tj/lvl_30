@@ -135,16 +135,19 @@ window.onload = function() {
     });
 
     // Animate sections on scroll
+    // Animate sections on scroll
     const sections = document.querySelectorAll('.section');
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate__fadeIn');
-            } else {
-                entry.target.classList.remove('animate__fadeIn');
-            }
-        });
-    }, { threshold: 0.1 });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.querySelector('.container').classList.add('animate__animated', 'animate__fadeIn');
+        }
+    });
+}, { threshold: 0.1 });
+
+sections.forEach(section => {
+    observer.observe(section);
+});
 
     sections.forEach(section => {
         observer.observe(section);
